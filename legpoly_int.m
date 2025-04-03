@@ -4,24 +4,20 @@ function [y] = legpoly_int(t,x,w)
 
 %*********************************************************************
 % Number of nodes should be 4*N (4,8,...)
-
 N = floor(numel(t)/4);
 
 %*********************************************************************
 % Zeros of the Legendre polynomial P4(x)
-
 zer1 = sqrt(3/7-(2/7)*sqrt(6/5));
 zer2 = sqrt(3/7+(2/7)*sqrt(6/5));
 
 %*********************************************************************
 % Gauss-Legendre weights
-
 weigh1 = (18+sqrt(30))/36;
 weigh2 = (18-sqrt(30))/36;
 
 %*********************************************************************
 % Nodal values of Legendre polynomials
-
 A = [1.0000   -0.8611    0.6123   -0.3047
     1.0000   -0.3400   -0.3266    0.4117
     1.0000    0.3400   -0.3266   -0.4117
@@ -29,7 +25,6 @@ A = [1.0000   -0.8611    0.6123   -0.3047
 
 %**********************************************************************
 % Integration
-
 y = 0;
 
 for i = 1:N
@@ -47,7 +42,7 @@ for i = 1:N
        end
     end
     
-    % Coefficients (approximated by Gauss–Legendre quadrature)
+    % Coefficients (approximated by Gaussâ€“Legendre quadrature)
     
     xvec = [weigh2*x(4*i-3);weigh1*x(4*i-2);weigh1*x(4*i-1);weigh2*x(4*i)];
     alpha = zeros(4,1);
