@@ -1,0 +1,1 @@
+This repository contains the MATLAB implementation files for a fast numerical integration algorithm for oscillatory integrals arising in the modal analysis of circularly symmetric structures. Simpson's method and trapezoidal integration are also included for comparison purposes. 
