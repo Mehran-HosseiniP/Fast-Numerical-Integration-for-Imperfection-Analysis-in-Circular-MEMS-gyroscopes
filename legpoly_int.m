@@ -1,4 +1,4 @@
-function [y] = legpoly_int1(t,x,w)
+function [y] = legpoly_int(t,x,w)
 % Numerical integration of x(t)*exp(1j*w*t) using Legendre polynomials
 
 %*********************************************************************
